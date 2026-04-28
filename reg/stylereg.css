@@ -1,0 +1,71 @@
+/* Базовые стили для всей страницы */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* Светло-серый фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Стили для карточки формы */
+form {
+    background-color: #ffffff; /* Белый цвет карточки */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 360px;
+    text-align: center; /* Центрирование содержимого */
+}
+
+/* Стили для лейблов (надписей) */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333; /* Тёмно-серый цвет текста */
+}
+
+/* Стили для полей ввода (карточки) */
+input {
+    width: calc(100% - 2rem); /* Учитываем отступы */
+    margin: 0.5rem auto; /* Центрирование поля */
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #f9f9f9; /* Светло-серый фон поля */
+    color: #333;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+/* Эффект при фокусе на поле */
+input:focus {
+    background-color: #e0f2ff; /* Голубоватый акцент при фокусе */
+    transform: translateY(-2px);
+}
+
+/* Стили для кнопки (если добавите) */
+button {
+    width: calc(100% - 2rem);
+    margin: 1.5rem auto 0.5rem auto;
+    padding: 0.8rem;
+    background-color: #4a90e2; /* Основной акцентный цвет */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+button:hover {
+    background-color: #357ab8; /* Более тёмный оттенок при наведении */
+}
+
+button:focus {
+    outline: none;
+}
