@@ -1,5 +1,5 @@
 <?php
-require "connectBD.php";
+require "connectBD/connectBD.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

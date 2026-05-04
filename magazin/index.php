@@ -1,6 +1,5 @@
 <?php
-    require "connectBD.php";
-    // Получаем данные из базы 
+    require "../connectBD/connectBD.php";
     $name = $_POST['name'];
     $login = $_POST['login'];
     $password = $_POST['password'];
@@ -22,16 +21,16 @@
         <a href="#" id="profile-link">Мой профиль</a>
     </div>
 
-    <!-- Ваш существующий код формы регистрации -->
+    
     <form action="/magazin/index.php" method="post">
         <div class="card" style="width: 18rem;">
             <ul class="list-group list-group-flush">
-                <!-- ... остальная часть формы ... -->
+                
             </ul>
         </div>
     </form>
 
-    <!-- Блок с информацией о профиле (сначала он скрыт) -->
+    <!-- Блок с информацией о профиле  -->
     <div id="profile-modal" class="profile-modal">
         <div class="profile-content">
             <span class="close-btn" id="close-btn">×</span>
@@ -45,11 +44,11 @@
     <div class="shop-card">
         <h1>Каталог товаров</h1>
 
-        <!-- Контейнер для сетки товаров (ОДИН на всю страницу) -->
+        <!-- Контейнер для товаров -->
         <div class="product-grid">
 
             <?php foreach ($products as $product): ?>
-                <!-- Карточка ОДНОГО товара -->
+                <!-- Карточка товара -->
                 <div class="product-card card">
                     <h3><?= htmlspecialchars($product['name']) ?></h3>
                     <form action="corzinaSession.php" method="POST">
@@ -70,18 +69,18 @@ var profileLink = document.getElementById("profile-link");
 var modal = document.getElementById("profile-modal");
 var closeBtn = document.getElementById("close-btn");
 
-// Когда пользователь нажимает на ссылку "Мой профиль", открыть модальное окно
+
 profileLink.onclick = function(event) {
-    event.preventDefault(); // Отменить переход по ссылке
+    event.preventDefault(); 
     modal.style.display = "block";
 };
 
-// Когда пользователь нажимает на крестик (x), закрыть модальное окно
+
 closeBtn.onclick = function() {
     modal.style.display = "none";
 };
 
-// Когда пользователь кликает в любом месте за пределами окна, закрыть его
+
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";

@@ -1,13 +1,13 @@
 <?php
-session_start(); // Обязательно!
-require "connectBD.php";
+session_start(); 
+require "../connectBD/connectBD.php";
 
 // Очистка корзины
 if (isset($_GET['clear'])) {
     unset($_SESSION['basket']);
 }
 
-// Обработка добавления товара (если форма отправлена сюда)
+
 if (isset($_POST['add'])) {
     $product_id = (int)$_POST['product_id'];
     $qty = (int)$_POST['qty'];

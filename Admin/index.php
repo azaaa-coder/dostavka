@@ -1,7 +1,6 @@
 
-
 <?php
-require "connectBD.php";
+require "../connectBD/connectBD.php";
 
 
 

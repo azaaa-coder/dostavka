@@ -1,6 +1,6 @@
 <?php
 //подключили базу данных
-require "connectBD.php";
+require "../connectBD/connectBD.php";
 // функция удаления
 function delete($pdo, $id) {
     $sql = "DELETE FROM `Bookings` WHERE `id` = :id";
