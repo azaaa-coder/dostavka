@@ -149,6 +149,9 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="container">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
+            <a href="product.php" class="btn btn-success btn-sm" style="font-weight: 500; padding: 8px 14px; border: none; box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3);">
+                <i class="bi bi-box-seam me-1"></i> Управление товарами
+            </a>
             <span><i class="bi bi-receipt-cutoff me-2"></i>Заказы клиентов</span>
             <span class="badge bg-light text-dark"><?= count($orders) ?> активных</span>
         </div>
